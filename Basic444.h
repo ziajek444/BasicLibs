@@ -23,8 +23,11 @@ namespace ZIAJEK_BASIC_DEFINES_444
 #define LPRINTLN(x) std::cout<<std::boolalpha<<x<<std::noboolalpha<<"\r\n"
 #define LPRINTEND(x) std::cout<<std::boolalpha<<x<<std::noboolalpha<<std::endl
 
-#define loop(HOW_MUCH) ZIAJEK_BASIC_DEFINES_444::LOOPER = (HOW_MUCH - 1); \
-                       for( ; ZIAJEK_BASIC_DEFINES_444::LOOPER >= 0; -- ZIAJEK_BASIC_DEFINES_444::LOOPER )
+#define repeat(HOW_MUCH) ZIAJEK_BASIC_DEFINES_444::LOOPER = (HOW_MUCH - 1); \
+                         for( ; ZIAJEK_BASIC_DEFINES_444::LOOPER >= 0; -- ZIAJEK_BASIC_DEFINES_444::LOOPER )
+
+#define loop(HOW_MUCH) ZIAJEK_BASIC_DEFINES_444::LOOPER = (HOW_MUCH + 1); \
+                       while(-- ZIAJEK_BASIC_DEFINES_444::LOOPER)
 
 
 #endif
